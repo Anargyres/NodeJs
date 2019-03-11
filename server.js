@@ -8,9 +8,11 @@ app.get('/hello', function (req, res) {
 })
 
 app.post('/chat', function(req, res) {
-  if(req.body.msg == "ville"){
+  if(req.body.msg === "ville"){
     res.send("Nous sommes à Paris")
-  }else {
+  }
+
+  if(req.body.msg === "météo"){
     res.send("Il fait beau")
   }
 })
