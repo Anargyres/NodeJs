@@ -8,7 +8,11 @@ app.get('/hello', function (req, res) {
 })
 
 app.post('/chat', function(req, res) {
-  console.log(res)
+  if(req.body.msg == "ville"){
+    res.send("Nous sommes à Paris")
+  }else {
+    res.send("Il fait beau")
+  }
 })
 
 var port = process.env.PORT || 3000;
