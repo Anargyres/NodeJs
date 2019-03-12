@@ -17,12 +17,16 @@ const assert = require('assert');
     // Get the collection
     const col = db.collection('dates');
 
+
+    let res = await db.collection('dates').insertOne({date: new Date()});
+    assert.equal(1, res.insertedCount);
+
     // Insert multiple documents
     const r = await col.insertMany([{a:1}, {a:1}, {a:1}]);
     assert.equal(3, r.insertedCount);
 
     // Get the cursor
-    const cursor = col.find({a:1}).limit(2);
+    const cursor = col.find();
 
     // Iterate over the cursor
     while(await cursor.hasNext()) {
