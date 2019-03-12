@@ -22,8 +22,8 @@ const assert = require('assert');
     assert.equal(1, res.insertedCount);
 
     // Insert multiple documents
-    const r = await col.insertMany([{a:1}, {a:1}, {a:1}]);
-    assert.equal(3, r.insertedCount);
+    const r = await col.insert({date:2});
+    assert.equal(&, r.insertedCount);
 
     // Get the cursor
     const cursor = col.find();
