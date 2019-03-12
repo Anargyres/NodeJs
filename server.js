@@ -16,6 +16,9 @@ app.post('/chat', function(req, res) {
   if(req.body.msg === "météo"){
     res.send("Il fait beau")
   }
+  if(req.boby.msg === "demain"){
+    
+  }
 })
 
 var port = process.env.PORT || 3000;
