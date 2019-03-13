@@ -60,6 +60,10 @@ const assert = require('assert');
     }
   });
 
+  app.delete('/messages/last', (res, req) => {
+    
+  })
+
   try {
     await client.connect();
     console.log("Connected correctly to server");
